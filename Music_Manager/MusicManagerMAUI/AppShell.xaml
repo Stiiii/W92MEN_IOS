@@ -4,12 +4,35 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MusicManagerMAUI"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="MusicManagerMAUI">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="Albums">
+        <ShellContent
+            Title="Albums"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Artists">
+        <ShellContent
+            Title="Artists"
+            ContentTemplate="{DataTemplate local:ArtistPage}"
+            Route="ArtistPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Ratings">
+        <ShellContent
+            Title="Ratings"
+            ContentTemplate="{DataTemplate local:RatingPage}"
+            Route="RatingPage" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Artist with the most albums">
+        <ShellContent
+            Title="Artist with the most albums"
+            ContentTemplate="{DataTemplate local:ArtistWithMostAlbumsPage}"
+            Route="ArtistWithMostAlbumsPage" />
+    </FlyoutItem>
 
 </Shell>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicManagerMAUI.ArtistWithMostAlbumsPage"
+             Title="ArtistWithMostAlbumsPage">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="15" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="Artist with the most albums:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="{Binding ArtistWithMostAlbums.ArtistId, StringFormat='{0:F0}. '}" FontAttributes="Bold" />
+                <Label Text="{Binding ArtistWithMostAlbums.ArtistsName, StringFormat=' {0:F0} '}" FontAttributes="Bold" />
+                <Label Text="{Binding ArtistWithMostAlbums.Description, StringFormat=' ({0:F0})'}" FontAttributes="Bold" />
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

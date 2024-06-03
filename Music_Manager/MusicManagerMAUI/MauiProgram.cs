@@ -18,7 +18,14 @@ namespace MusicManagerMAUI
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddSingleton<MainPageViewModel>();
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<ArtistPageViewModel>();
+            builder.Services.AddSingleton<ArtistPage>();
+            builder.Services.AddSingleton<RatingPageViewModel>();
+            builder.Services.AddSingleton<RatingPage>();
+            builder.Services.AddSingleton<ArtistWithMostAlbumsPageViewModel>();
+            builder.Services.AddSingleton<ArtistWithMostAlbumsPage>();
             return builder.Build();
         }
     }

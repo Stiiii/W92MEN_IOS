@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicManagerMAUI", "MusicManagerMAUI\MusicManagerMAUI.csproj", "{0B3085FF-BBD5-4FC4-81AA-BA56CF74A96A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicManagerMAUI", "MusicManagerMAUI\MusicManagerMAUI.csproj", "{0B3085FF-BBD5-4FC4-81AA-BA56CF74A96A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

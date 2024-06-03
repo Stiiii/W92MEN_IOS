@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MusicManagerMAUI.MainPage">
+             x:Class="MusicManagerMAUI.RatingPage"
+             Title="RatingPage">
 
     <ContentPage.Resources>
         <Style TargetType="Button">
@@ -13,9 +14,9 @@
     </ContentPage.Resources>
     <ScrollView>
         <Grid ColumnDefinitions="*,*">
-            <CollectionView ItemsSource="{Binding Albums}"
-                SelectedItem="{Binding SelectedAlbum}"
-                SelectionMode="Single">
+            <CollectionView ItemsSource="{Binding Ratings}"
+    SelectedItem="{Binding SelectedRating}"
+    SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Margin="10" Padding="10" Stroke="#1d294d">
@@ -23,9 +24,9 @@
                                 <RoundRectangle CornerRadius="5,5,5,5" />
                             </Border.StrokeShape>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding AlbumId, StringFormat='{0:F0}. '}" />
-                                <Label Text="{Binding AlbumName, StringFormat=' {0:F0} '}" />
-                                <Label Text="{Binding Artist, StringFormat=' ({0:F0})'}" />
+                                <Label Text="{Binding ratingId, StringFormat='{0:F0}. '}" />
+                                <Label Text="{Binding rating, StringFormat=' {0:F0} '}" />
+                                <Label Text="{Binding albumId, StringFormat=' ({0:F0})'}" />
                             </StackLayout>
                         </Border>
                     </DataTemplate>
@@ -39,10 +40,10 @@
                         <RoundRectangle CornerRadius="5,5,5,5" />
                     </Border.StrokeShape>
                     <StackLayout>
-                        <Label Text="Album name:"/>
-                        <Entry Text="{Binding CreateAlbum.AlbumName}"/>
-                        <Label Text="Artist:"/>
-                        <Entry Text="{Binding CreateAlbum.Artist}"/>
+                        <Label Text="Rating name:"/>
+                        <Entry Text="{Binding CreateRating.Rating}"/>
+                        <Label Text="Desc:"/>
+                        <Entry Text="{Binding CreateRating.AlbumId}"/>
                     </StackLayout>
                 </Border>
                 <Label Text="Update" FontSize="Medium" />
@@ -51,17 +52,16 @@
                         <RoundRectangle CornerRadius="5,5,5,5" />
                     </Border.StrokeShape>
                     <StackLayout>
-                        <Label Text="Album name:"/>
-                        <Entry Text="{Binding SelectedAlbum.AlbumName}"/>
-                        <Label Text="Artist:"/>
-                        <Entry Text="{Binding SelectedAlbum.Artist}"/>
+                        <Label Text="Artist name:"/>
+                        <Entry Text="{Binding SelectedRating.Rating}"/>
+                        <Label Text="Desc:"/>
+                        <Entry Text="{Binding SelectedRating.AlbumId}"/>
                     </StackLayout>
                 </Border>
-                <Button Text="Create album" Command="{Binding CreateAlbumCommand}"/>
-                <Button Text="Update album" Command="{Binding UpdateAlbumCommand}"/>
-                <Button Text="Delete album" Command="{Binding DeleteAlbumCommand}"/>
+                <Button Text="Create rating" Command="{Binding CreateRatingCommand}"/>
+                <Button Text="Update rating" Command="{Binding UpdateRatingCommand}"/>
+                <Button Text="Delete rating" Command="{Binding DeleteRatingCommand}"/>
             </VerticalStackLayout>
         </Grid>
     </ScrollView>
-
 </ContentPage>
