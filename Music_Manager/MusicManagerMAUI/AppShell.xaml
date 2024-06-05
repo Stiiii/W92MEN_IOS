@@ -35,4 +35,11 @@
             Route="ArtistWithMostAlbumsPage" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Albums with max rating">
+        <ShellContent
+        Title="Albums with max rating"
+        ContentTemplate="{DataTemplate local:AlbumsWithMaxRatingPage}"
+        Route="AlbumsWithMaxRatingPage" />
+    </FlyoutItem>
+
 </Shell>

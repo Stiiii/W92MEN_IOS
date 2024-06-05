@@ -26,6 +26,8 @@ namespace MusicManagerMAUI
             builder.Services.AddSingleton<RatingPage>();
             builder.Services.AddSingleton<ArtistWithMostAlbumsPageViewModel>();
             builder.Services.AddSingleton<ArtistWithMostAlbumsPage>();
+            builder.Services.AddSingleton<AlbumsWithMaxRatingPageViewModel>();
+            builder.Services.AddSingleton<AlbumsWithMaxRatingPage>();
             return builder.Build();
         }
     }
