@@ -71,6 +71,9 @@
 	  <MauiXaml Update="ArtistPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ArtistsRatingHigherThanAveragePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ArtistWithMostAlbumsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicManagerMAUI.ArtistsRatingHigherThanAveragePage"
+             Title="ArtistsRatingHigherThanAveragePage">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BackgroundColor" Value="#1d294d"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="#ffab00"/>
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid ColumnDefinitions="*,*">
+            <CollectionView ItemsSource="{Binding Artists}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="10" Padding="10" Stroke="#1d294d">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="5,5,5,5" />
+                            </Border.StrokeShape>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ArtistsId, StringFormat='{0:F0}. '}" />
+                                <Label Text="{Binding ArtistsName, StringFormat=' {0:F0} '}" />
+                                <Label Text="{Binding Description, StringFormat=' ({0:F0})'}" />
+                            </StackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <ActivityIndicator Color="Brown" IsRunning="{Binding IsBusy}"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

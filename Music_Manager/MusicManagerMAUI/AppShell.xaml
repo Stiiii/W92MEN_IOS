@@ -42,4 +42,13 @@
         Route="AlbumsWithMaxRatingPage" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Artists with higher rating than average">
+        <ShellContent
+    Title="Artists with higher rating than average"
+    ContentTemplate="{DataTemplate local:ArtistsRatingHigherThanAveragePage}"
+    Route="ArtistsRatingHigherThanAveragePage" />
+    </FlyoutItem>
+
+    
+
 </Shell>
